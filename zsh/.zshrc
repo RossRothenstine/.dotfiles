@@ -6,7 +6,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-this_dir="$(dirname $(readlink $0))"
+this_dir="$(dirname $(readlink ${(%):-%N}))"
 
 # Load all scripts within the bash.d directory.
 for config_file in $(ls $this_dir/bash.d/*.sh)
