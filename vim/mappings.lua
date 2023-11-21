@@ -69,4 +69,17 @@ M.copilot = {
   }
 }
 
+M.default = {
+  n = {
+    ["<leader>w"] = {
+      "<cmd> w <CR>",
+      "Save file"
+    },
+    ["<leader>q"] = {
+      "<cmd> q <CR>",
+      "Quit file"
+    }
+  },
+};
+
 return M
