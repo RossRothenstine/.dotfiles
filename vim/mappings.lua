@@ -44,7 +44,12 @@ M.lsp = {
     ["<leader>ss"] = {
       "<cmd> ClangdSwitchSourceHeader <CR>",
       "Switch between header and source"
-    }
+    },
+    ["<M-CR>"] = {
+      "<cmd>lua vim.lsp.buf.code_action()<CR>",
+      "Go to next Code Action",
+      { silent = true },
+    },
   }
 }
 
@@ -78,7 +83,23 @@ M.default = {
     ["<leader>q"] = {
       "<cmd> q <CR>",
       "Quit file"
-    }
+    },
+    ["<leader>sw"] = {
+      "<cmd> SessionSave <CR>",
+      "Save Session",
+    },
+    ["<leader>sr"] = {
+      "<cmd> SessionRestore <CR>",
+      "Open Session",
+    },
+    ["<leader>sd"] = {
+      "<cmd> SessionDelete <CR>",
+      "Delete Session",
+    },
+    ["<leader>sv"] = {
+      "<cmd> Autosession search <CR>",
+      "View Session",
+    },
   },
 };
 

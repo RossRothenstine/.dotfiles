@@ -1,5 +1,32 @@
 local plugins = {
   {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function()
+      require("gopher").setup()
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
+    end,
+  },
+  {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function(_, opts)
+      require("dap-go").setup(opts)
+    end,
+  },
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+      }
+    end
+  },
+  {
     "tikhomirov/vim-glsl",
     lazy = false,
   },
@@ -162,7 +189,9 @@ local plugins = {
       ensure_installed = {
         "clangd",
         "clang-format",
-        "codelldb"
+        "codelldb",
+        "gopls",
+        "rust-analyzer",
       }
     }
   },
