@@ -23,6 +23,9 @@ local plugins = {
     config = function()
       require("auto-session").setup {
         log_level = "error",
+        auto_session_enable_file_tree_integration = true,
+        post_restore_cmds = { change_nvim_tree_dir, "NvimTreeOpen" },
+        pre_save_cmds = { "NvimTreeClose" },
       }
     end
   },
