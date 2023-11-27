@@ -197,7 +197,10 @@ local plugins = {
         "gopls",
         "rust-analyzer",
       }
-    }
+    },
+    build = function ()
+      vim.cmd [[silent! MasonInstallAll]]
+    end
   },
 }
 
