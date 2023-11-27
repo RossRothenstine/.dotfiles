@@ -46,7 +46,8 @@ local plugins = {
     "sidebar-nvim/sidebar.nvim",
     event = "VeryLazy",
     config = function ()
-      require("sidebar-nvim").setup{ open = true }
+      require("sidebar-nvim").setup{ open = false }
+      require("core.utils").load_mappings("sidebar")
     end
   },
   {

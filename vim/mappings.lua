@@ -74,6 +74,15 @@ M.copilot = {
   }
 }
 
+M.sidebar = {
+  n = {
+    ["<leader>so"] = {
+      "<cmd>SidebarNvimToggle<CR>",
+      "Open or closes the sidebar",
+    }
+  }
+}
+
 M.default = {
   n = {
     ["<leader>w"] = {
