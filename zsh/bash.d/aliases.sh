@@ -7,4 +7,11 @@ alias ..='cd ..'
 alias cls='clear'
 alias k='kubectl'
 alias kx='kubectx'
-alias vim='nvim'
+
+# if vim is not nvim, alias it to nvim.
+if ! command -v nvim &> /dev/null
+then
+    alias vim='vim'
+else
+    alias vim='nvim'
+fi
