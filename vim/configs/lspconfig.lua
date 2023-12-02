@@ -33,3 +33,9 @@ lspconfig.gopls.setup {
   },
 }
 
+lspconfig.gdscript.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"gdscript", "gd", "gd3", "gdscript3"},
+  root_dir = util.root_pattern("project.godot", ".git"),
+}
