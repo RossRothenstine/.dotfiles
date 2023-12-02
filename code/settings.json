@@ -1,0 +1,159 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "yaml": true
+    },
+    "godot_tools.gdscript_lsp_server_port": 6005,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "vim.useCtrlKeys": true,
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+      // NAVIGATION
+      // switch b/w buffers
+      { "before": ["<S-h>"], "commands": [":bprevious"] },
+      { "before": ["<S-l>"], "commands": [":bnext"] },
+  
+      // splits
+      { "before": ["leader", "v"], "commands": [":vsplit"] },
+      { "before": ["leader", "s"], "commands": [":split"] },
+
+      // panes
+      {
+        "before": ["leader", "h"],
+        "commands": ["workbench.action.focusLeftGroup"]
+      },
+      {
+        "before": ["leader", "j"],
+        "commands": ["workbench.action.focusBelowGroup"]
+      },
+      {
+        "before": ["leader", "k"],
+        "commands": ["workbench.action.focusAboveGroup"]
+      },
+      {
+        "before": ["leader", "l"],
+        "commands": ["workbench.action.focusRightGroup"]
+      },
+      // NICE TO HAVE
+      { "before": ["leader", "w"], "commands": [":w!"] },
+      { "before": ["leader", "q"], "commands": [":q!"] },
+      { "before": ["leader", "x"], "commands": [":x!"] },
+      {
+        "before": ["[", "d"],
+        "commands": ["editor.action.marker.prev"]
+      },
+      {
+        "before": ["]", "d"],
+        "commands": ["editor.action.marker.next"]
+      },
+      {
+        "before": ["<leader>", "c", "a"],
+        "commands": ["editor.action.quickFix"]
+      },
+      { "before": ["leader", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+      { "before": ["leader", "f", "d"], "commands": ["editor.action.formatDocument"] },
+      { 
+        "before": ["leader", "p"], 
+        "commands": ["workbench.action.showCommands"]
+      },
+      {
+        "before": ["g", "h"],
+        "commands": ["editor.action.showDefinitionPreviewHover"]
+      },
+      // File Tree
+      {
+        "before": ["leader", "n"],
+        "commands": ["workbench.explorer.fileView.focus"]
+      },
+      // Opens command palette with <l>-e
+      {
+        "before": ["leader", "e"],
+        "commands": ["workbench.action.showCommands"]
+      },
+
+      // Go to Definition
+      {
+        "before": ["leader", "g", "d"],
+        "commands": ["editor.action.goToDeclaration"]
+      },
+
+      // Close current file by using <l>-x
+      {
+        "before": ["leader", "x"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      },
+
+      // Open the find in files by using <l>-f-w
+      {
+        "before": ["leader", "f", "w"],
+        "commands": ["workbench.action.findInFiles"]
+      },
+
+      // Add breakpoint with <l>-d-b
+      {
+        "before": ["leader", "d", "b"],
+        "commands": ["editor.debug.action.toggleBreakpoint"]
+      },
+
+      // Run the current file with <l>-r
+      {
+        "before": ["leader", "r"],
+        "commands": ["workbench.action.debug.run"]
+      },
+
+      // Cycle to next tab with <tab>
+      {
+        "before": ["tab"],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["S-tab"],
+        "commands": ["workbench.action.previousEditor"]
+      },
+      // Redo with <ctrl>-r
+      {
+        "before": ["u"],
+        "commands": ["undo"]
+      },
+      {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
+      },
+    ],
+    "vim.visualModeKeyBindings": [
+      // Stay in visual mode while indenting
+      { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+      { "before": [">"], "commands": ["editor.action.indentLines"] },
+      // Move selected lines while staying in visual mode
+      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+      { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+      // toggle comment selection
+      { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "git.openRepositoryInParentFolders": "always",
+    "cmake.configureOnOpen": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "vim.handleKeys": {
+      "<C-f>": false,
+      "<C-d>": true,
+      "<C-s>": false,
+      "<C-z>": false,
+      "<C-r>": true,
+    }
+}
