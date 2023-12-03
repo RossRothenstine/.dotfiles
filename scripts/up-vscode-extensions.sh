@@ -30,6 +30,7 @@ EXTENSIONS=(
 	"ms-python.vscode-pylance"
 	"ms-toolsai.jupyter"
 	"redhat.vscode-yaml"
+	"visualstudiotoolsforunity.vstuc"
 )
 
 for extension in "${EXTENSIONS[@]}"; do
